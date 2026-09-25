@@ -997,7 +997,8 @@ def build_table1(reconstructed: Mapping[str, Any]) -> pd.DataFrame:
             "Overall",
             "Survivors",
             "Non-survivors",
-        ],    )
+        ],
+    )
 
 
 # =============================================================================
@@ -1996,7 +1997,8 @@ def build_false_negative_review(
             "emergency",
             "emergency_status",
             "urgency",
-        ],        "department": [
+        ],
+        "department": [
             "department",
             "surgical_department",
             "surgery_department",
@@ -2996,6 +2998,7 @@ def format_publication_dataframe(
     # ------------------------------------------------------------------
     for column in display.columns:
         token = _normalize_column_token(column)
+
         # Counts / ranks / bin identifiers.
         if token in {
             "n",
@@ -3994,7 +3997,8 @@ def build_compact_word_views(
         label_col = _column_by_candidates(
             frame,
             ["display_label", "subgroup_label"],
-        )        if label_col is None:
+        )
+        if label_col is None:
             label_col = _column_by_candidates(
                 frame,
                 ["subgroup_level", "subgroup_variable"],
@@ -4993,7 +4997,8 @@ def dataframe_to_word_table(
 
     table = document.add_table(
         rows=1,
-        cols=max(1, len(shown.columns)),    )
+        cols=max(1, len(shown.columns)),
+    )
     table.style = "Table Grid"
     table.autofit = True
 
@@ -5992,7 +5997,8 @@ def run_all(
         # Submission set is deterministic and must contain exactly 12 figures.
         submission_figures, figure_manifest = resolve_submission_figure_set(
             run_dir,
-            output_dir,            figure1_path=figure1_path,
+            output_dir,
+            figure1_path=figure1_path,
             figure2_path=figure2_path,
         )
 

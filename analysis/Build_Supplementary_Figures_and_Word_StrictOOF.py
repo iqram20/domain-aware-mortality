@@ -997,7 +997,8 @@ def run(
     print("Building Figure S7...")
     figure_paths["Figure S7"] = build_figure_s7(
         run_dir,
-        output_dir,        dpi=dpi,
+        output_dir,
+        dpi=dpi,
     )
 
     captions = build_captions(run_dir)

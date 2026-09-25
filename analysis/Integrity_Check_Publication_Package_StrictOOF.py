@@ -997,7 +997,8 @@ def check_s7_overall(
     variable_col = first_existing_column(table, ["subgroup_variable"])
     level_col = first_existing_column(table, ["subgroup_level"])
 
-    if variable_col is None or level_col is None:        reporter.add(
+    if variable_col is None or level_col is None:
+        reporter.add(
             "Table S7 overall row",
             "FAIL",
             "Subgroup columns missing.",
@@ -1997,6 +1998,7 @@ def parse_args(
         filtered.append(argument)
 
     args, unknown = parser.parse_known_args(filtered)
+
     if unknown:
         print(
             "Ignoring unrecognized Jupyter/IPython arguments:",
